@@ -98,17 +98,29 @@ export default function MathProblem({ difficulty, onComplete }: Props) {
                                         placeholder="输入答案"
                                         autoFocus
                                     />
-                                    <motion.button
-                                        type="submit"
-                                        whileHover={{ scale: 1.05 }}
-                                        whileTap={{ scale: 0.95 }}
-                                        className={`w-full mt-4 bg-gradient-to-r ${getDifficultyColor(difficulty)} 
-                                          text-white text-xl py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all
-                                          flex items-center justify-center gap-2`}
-                                    >
-                                        <span>提交答案</span>
-                                        <ArrowRightIcon className="w-5 h-5" />
-                                    </motion.button>
+                                    <div className="flex gap-2">
+                                        <motion.button
+                                            type="submit"
+                                            whileHover={{ scale: 1.05 }}
+                                            whileTap={{ scale: 0.95 }}
+                                            className={`flex-1 mt-4 bg-gradient-to-r ${getDifficultyColor(difficulty)} 
+                                              text-white text-xl py-4 px-6 rounded-xl shadow-lg hover:shadow-xl transition-all
+                                              flex items-center justify-center gap-2`}
+                                        >
+                                            <span>提交答案</span>
+                                            <ArrowRightIcon className="w-5 h-5" />
+                                        </motion.button>
+                                        <motion.button
+                                            type="button"
+                                            onClick={handleNext}
+                                            whileHover={{ scale: 1.05 }}
+                                            whileTap={{ scale: 0.95 }}
+                                            className="mt-4 px-4 py-4 text-gray-500 hover:text-gray-700 bg-gray-100 
+                                              hover:bg-gray-200 rounded-xl transition-all text-sm"
+                                        >
+                                            跳过
+                                        </motion.button>
+                                    </div>
                                 </div>
                             </form>
                         ) : (
