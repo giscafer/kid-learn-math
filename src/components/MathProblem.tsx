@@ -62,7 +62,7 @@ export default function MathProblem({ difficulty, onComplete }: Props) {
     };
 
     return (
-        <div className="min-h-[60vh] flex flex-col items-center justify-center p-4">
+        <div className="min-h-[50vh] flex flex-col items-center justify-center p-4">
             <AnimatePresence mode="wait">
                 <motion.div
                     key={problem.id}
