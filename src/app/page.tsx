@@ -97,7 +97,7 @@ export default function Home() {
           transition={{ delay: 0.2 }}
         >
           {showStats ? (
-            <Stats stats={stats} />
+            <div  className="flex justify-center"><Stats stats={stats} /></div>
           ) : (
             <MathProblem
               difficulty={difficulty}
